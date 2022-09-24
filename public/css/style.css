@@ -1,0 +1,18 @@
+:root {
+    --main-color: #16aaa1;
+    --button--color: #99CCCC;
+    --button--hover--color: #E6E6E6;
+    --available--color: #99FF00;
+    --available--hover--color: #99CC33;
+    --occupied--color: #FFFF61;
+    --occupied--hover--color: #DCDC00;
+    --unavailable--color: #FF0066;
+    --unavailable--hover--color: #DC0058;
+    --vip--color: #00CCFF;
+    --vip--hover--color: #00B0DC;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
