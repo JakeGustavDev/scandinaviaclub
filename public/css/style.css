@@ -1,5 +1,5 @@
 :root {
-    --main-color: #16aaa1;
+    --main--color: #16aaa1;
     --button--color: #99CCCC;
     --button--hover--color: #E6E6E6;
     --available--color: #99FF00;
@@ -12,8 +12,137 @@
     --vip--hover--color: #00B0DC;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
-    color: var(--main-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+main div.error {
+    font-size: 1.1em;
+    color: red;
+}
+
+main div.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+main div.container div.lockers {
+    border: 2px solid var(--main--color);
+    border-radius: 5px;
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+}
+
+main div.container div.lockers div.profile {
+    font-weight: bolder;
+    font-size: 0.95em;
+    border-radius: 6px;
+    text-align: center;
+    margin: 2px;
+    width: 80px;
+    height: 80px;
+    background-color: var(--vip--color);
+    padding: 3px;
+}
+
+main div.container div.menu {
+    width: 20%;
+    height: auto;
+    margin: 3px;
+    padding: 3px;
+    border: 2px;
+}
+main div.menu form div.checked{
+    display: flex;
+    justify-content: space-evenly;
+}
+main div.menu form div.entry input{
+    width: 100px;
+}
+main div.container div.menu div.icons{
+    border:  2px solid var(--main--color);
+    border-radius:  5px;
+    display: flex;
+    width: 100%;
+}
+
+main div.container div.menu div.icons i {
+    width: 100px;
+    height: 55px;
+    background-color: var(--button--color);
+    margin: 3px;
+    border-radius: 6px;
+}
+main div.container div.menu form{
+    margin-top: 2px;
+    border:  2px solid var(--main--color);
+    border-radius: 5px;
+    width: 310px;
+    height: 395px;
+}
+main div.container div.menu form div.locker select{
+    width: 100px;
+}
+main div.container div.menu form h3{
+    text-align: center;
+    padding-top: 5px;
+}
+
+main div.container div.menu hr{
+    width: 95%;
+    margin: 0 auto;
+}
+
+main form.login_form {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+main form.login_form button {
+    background-color: var(--main--color);
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4em;
+    margin: 10px 0;
+    color: white;
+}
+
+main form.login_form input {
+    text-align: center;
+    margin: 5px 0;
+    font-size: 1.2em;
+    border: 1px solid var(--button--color);
+    border-radius: 5px;
+    width: 30%;
+}
+
+main form.login_form input::placeholder {
+    text-align: center;
+}
+
+main img.logo {
+    width: 40%;
+}
+
+main img.logo_main {
+    width: 20%;
 }

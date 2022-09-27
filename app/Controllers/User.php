@@ -8,4 +8,8 @@ class User extends BaseController
     {
         return view('pages/login');
     }
+    public function main()
+    {
+        return view('pages/main');
+    }
 }
