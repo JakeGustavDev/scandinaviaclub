@@ -5,17 +5,17 @@
         <div class="lockers">
             <div class="vip">Kevin Aleman</div>
             <div class="occupied">1</div>
-            <div class="available">2</div> 
+            <div class="available">2</div>
             <div class="unavailable">3</div>
-            
+
         </div>
         <div class="menu">
             <div class="icons">
                 <div><i class="fa-solid fa-cash-register"></i></div>
-                <div><i></i></div>
-                <div><i></i></div>
-                <div><i></i></div>
-                <div><i></i></div>
+                <div><i class="fa-solid fa-lock-open"></i></div>
+                <div><i class="fa-solid fa-dollar-sign"></i></div>
+                <div><i class="fa-solid fa-file"></i></div>
+                <div><i class="fa-solid fa-right-from-bracket"></i></div>
             </div>
             <form method="POST">
                 <h3>REGISTRAR ENTRADA</h3>
@@ -28,17 +28,20 @@
                     <select name="" id=""></select>
                 </div>
                 <div class="entry">
-                    <label for="">Costo entrada:</label>
-                    <label for="">Efectivo:</label><label for="">Pos:</label>
-                    <input min="0">$/<input min="0">$
+                        <label for="">Efectivo:</label>
+                        <input min="0">$/
+                        <label for="">Pos:</label>
+                        <input min="0">$               
                 </div>
                 <div class="checked">
                     <input type="checkbox">
                     <p>Sólo masaje / depilación</p>
                 </div>
                 <button type="submit">Registrar</button>
+                <hr>
+                <h3>ENTRADAS HOY: </h3>
+                <h1>0</h1>
             </form>
-            <hr>
         </div>
     </div>
 </main>

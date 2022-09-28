@@ -37,6 +37,10 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'User::login');
 $routes->get('/main', 'User::main');
+$routes->get('/lockerRec', 'User::lockerRec');
+$routes->get('/lockerBar', 'User::lockerBar');
+$routes->get('/lockerAdmin', 'User::lockerAdmin');
+
 
 /*
  * --------------------------------------------------------------------

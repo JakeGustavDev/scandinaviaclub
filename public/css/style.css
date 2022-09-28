@@ -124,7 +124,9 @@ main div.menu div.icons{
     width: 100%;
 }
 main div.menu div.icons div{
+    width: 18%;
     display: flex;
+    margin: 0 1%;
     justify-content: center;
     align-items: center;
     background-color: var(--button--color);
@@ -136,21 +138,58 @@ main div.menu div.icons div i{
     font-size: 2em;
     display: block;
 }
-main div.menu form div.checked{
+main div.menu form {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+main div.menu form button{
+    width: 40%;
+    justify-content: center;
+    background-color: var(--main--color);
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: white
+}
+main div.menu form div.checked{
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+main div.menu form div.entry {
+    width: 80%;
+    display: flex;
+    justify-content: center;
 }
 main div.menu form div.entry input{
-    width: 100px;
+    width: 60px;
 }
 main div.container div.menu form{
-    margin-top: 2px;
+    margin-top: 10px;
     border:  2px solid var(--main--color);
     border-radius: 5px;
-    width: 310px;
+    width: 100%;
+    padding: 5px;
     height: 395px;
 }
+div.menu form div.locker{
+    width: 80%;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+ }
+
+div.menu form div.name{
+    width: 80%;
+   display: flex;
+   justify-content: space-around;
+}
 main div.container div.menu form div.locker select{
+
     width: 100px;
 }
 main div.container div.menu form h3{

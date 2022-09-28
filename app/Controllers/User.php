@@ -12,4 +12,16 @@ class User extends BaseController
     {
         return view('pages/main');
     }
+    public function lockerRec()
+    {
+        return view('pages/lockerRec');
+    }
+    public function lockerBar()
+    {
+        return view('pages/lockerBar');
+    }
+    public function lockerAdmin()
+    {
+        return view('pages/lockerAdmin');
+    }
 }
