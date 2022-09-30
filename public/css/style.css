@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "heebo";
+    src: url("/public/fonts/Heebo.ttf");
+}
 :root {
     --main--color: #16aaa1;
     --button--color: #99CCCC;
@@ -15,6 +19,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family:"Heebo" ;
 }
 
 main {
@@ -39,16 +44,18 @@ main div.container {
 main div.container div.lockers {
     border: 2px solid var(--main--color);
     border-radius: 5px;
-    width: 30%;
+    width: 44%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 6px;
+    overflow-y: scroll;
+    margin-right: 1%;
 }
 
-main div.container div.lockers div.profile {
+main div.container div.lockers div.vip {
     font-weight: bolder;
     font-size: 0.95em;
     border-radius: 6px;
@@ -59,43 +66,130 @@ main div.container div.lockers div.profile {
     background-color: var(--vip--color);
     padding: 3px;
 }
+main div.container div.lockers div.vip:hover{
+    background-color: var(--vip--hover--color);
+}
+main div.container div.lockers div.occupied {
+    font-weight: bolder;
+    font-size: 0.95em;
+    border-radius: 6px;
+    text-align: center;
+    margin: 2px;
+    width: 80px;
+    height: 80px;
+    background-color: var(--occupied--color);
+    padding: 3px;
+}
+main div.container div.lockers div.occupied:hover {
+    background-color: var(--occupied--hover--color);
+}
+main div.container div.lockers div.available {
+    font-weight: bolder;
+    font-size: 0.95em;
+    border-radius: 6px;
+    text-align: center;
+    margin: 2px;
+    width: 80px;
+    height: 80px;
+    background-color: var(--available--color);
+    padding: 3px;
+}
+main div.container div.lockers div.available:hover{
+    background-color: var(--available--hover--color);
+}
+main div.container div.lockers div.unavailable {
+    font-weight: bolder;
+    font-size: 0.95em;
+    border-radius: 6px;
+    text-align: center;
+    margin: 2px;
+    width: 80px;
+    height: 80px;
+    background-color: var(--unavailable--color);
+    padding: 3px;
+}
+main div.container div.lockers div.unavailable:hover{
+    background-color: var(--unavailable--hover--color);
+}
 
 main div.container div.menu {
-    width: 20%;
-    height: auto;
-    margin: 3px;
-    padding: 3px;
-    border: 2px;
+    width: 23%;
 }
-main div.menu form div.checked{
+main div.menu div.icons{
     display: flex;
-    justify-content: space-evenly;
-}
-main div.menu form div.entry input{
-    width: 100px;
-}
-main div.container div.menu div.icons{
-    border:  2px solid var(--main--color);
-    border-radius:  5px;
-    display: flex;
+    justify-content: space-between;
+    border: 2px solid var(--main--color);
+    border-radius: 5px;
+    padding: 5px;
     width: 100%;
 }
-
-main div.container div.menu div.icons i {
-    width: 100px;
-    height: 55px;
+main div.menu div.icons div{
+    width: 18%;
+    display: flex;
+    margin: 0 1%;
+    justify-content: center;
+    align-items: center;
     background-color: var(--button--color);
-    margin: 3px;
-    border-radius: 6px;
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+main div.menu div.icons div i{
+    font-size: 2em;
+    display: block;
+}
+main div.menu form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main div.menu form button{
+    width: 40%;
+    justify-content: center;
+    background-color: var(--main--color);
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: white
+}
+main div.menu form div.checked{
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+main div.menu form div.entry {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+main div.menu form div.entry input{
+    width: 60px;
 }
 main div.container div.menu form{
-    margin-top: 2px;
+    margin-top: 10px;
     border:  2px solid var(--main--color);
     border-radius: 5px;
-    width: 310px;
+    width: 100%;
+    padding: 5px;
     height: 395px;
 }
+div.menu form div.locker{
+    width: 80%;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+ }
+
+div.menu form div.name{
+    width: 80%;
+   display: flex;
+   justify-content: space-around;
+}
 main div.container div.menu form div.locker select{
+
     width: 100px;
 }
 main div.container div.menu form h3{
