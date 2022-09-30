@@ -36,10 +36,14 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'User::login');
-$routes->get('/main', 'User::main');
-$routes->get('/lockerRec', 'User::lockerRec');
-$routes->get('/lockerBar', 'User::lockerBar');
-$routes->get('/lockerAdmin', 'User::lockerAdmin');
+$routes->get('/login/(:any)', 'User::login/$1');
+$routes->get('/user/main', 'User::main');
+$routes->get('/user/lockerRec', 'User::lockerRec');
+$routes->get('/user/lockerBar', 'User::lockerBar');
+$routes->get('/admin/lockerAdmin', 'User::lockerAdmin');
+
+
+$routes->post('/validateUser', 'User::validate_user');
 
 
 /*

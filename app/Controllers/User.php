@@ -10,8 +10,8 @@ class User extends BaseController
         $this->userModel = model('UserModel');
     }
 
-    public function login(){
-        return view('pages/login');
+    public function login($error = ''){
+        return view('pages/login', ['error' => $error]);
     }
 
     public function main(){
@@ -22,12 +22,16 @@ class User extends BaseController
         $user = $this->userModel->where('user',$_POST['user'])->findAll();
         if(count($user) > 0){
             if(password_verify($_POST['password'],$user[0]['password'])){
-                
+                $this->session->id = $user[0]['id'];
+                $this->session->user = $user[0]['user'];
+                $this->session->fullname = $user[0]['fullname'];
+                $this->session->type = $user[0]['type'];
+                return redirect()->to('/user/main');
             }else{
-                redirect()->to('/login/notmach');
+                return redirect()->to('/login/notmach');
             }
         }else{
-            redirect()->to('/login/notmach');
+            return redirect()->to('/login/notmach');
         }
     }
 
@@ -40,17 +44,16 @@ class User extends BaseController
             "created_by" => 1,
         ]);
     }
-    
-    public function lockerRec()
-    {
+
+    public function lockerRec(){
         return view('pages/lockerRec');
     }
-    public function lockerBar()
-    {
+    
+    public function lockerBar(){
         return view('pages/lockerBar');
     }
-    public function lockerAdmin()
-    {
+
+    public function lockerAdmin(){
         return view('pages/lockerAdmin');
     }
 }
