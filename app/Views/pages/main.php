@@ -7,7 +7,6 @@
             <div class="occupied">1</div>
             <div class="available">2</div>
             <div class="unavailable">3</div>
-
         </div>
         <div class="menu">
             <div class="icons">
