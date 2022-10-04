@@ -35,6 +35,7 @@ main div.error {
     color: red;
 }
 
+
 main div.container {
     display: flex;
     width: 100%;
@@ -110,9 +111,37 @@ main div.container div.lockers div.unavailable {
 main div.container div.lockers div.unavailable:hover{
     background-color: var(--unavailable--hover--color);
 }
+main div.container div.menu form{
+    margin-top: 2%;
+    border:  2px solid var(--main--color);
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+    height: 81.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main div.container div.menu form div.locker select{
+
+    width: 100px;
+}
+main div.container div.menu form h3{
+    text-align: center;
+    padding-top: 5px;
+}
+
+main div.container div.menu hr{
+    width: 95%;
+    margin: 0 auto;
+}
 
 main div.container div.menu {
     width: 23%;
+}
+main div.error {
+    font-size: 1.1em;
+    color: red;
 }
 main div.menu div.icons{
     display: flex;
@@ -167,41 +196,55 @@ main div.menu form div.entry {
 main div.menu form div.entry input{
     width: 60px;
 }
-main div.container div.menu form{
-    margin-top: 2%;
-    border:  2px solid var(--main--color);
-    border-radius: 5px;
-    width: 100%;
-    padding: 5px;
-    height: 81.5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-div.menu form div.locker{
+
+main div.menu form div.locker{
     width: 80%;
     margin: 10px;
     display: flex;
     justify-content: space-around;
  }
 
-div.menu form div.name{
+main div.menu form div.name{
     width: 80%;
    display: flex;
    justify-content: space-around;
 }
-main div.container div.menu form div.locker select{
-
-    width: 100px;
-}
-main div.container div.menu form h3{
-    text-align: center;
-    padding-top: 5px;
-}
-
-main div.container div.menu hr{
-    width: 95%;
+main.lockerBar{
     margin: 0 auto;
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+main.lockerBar div.consummation{
+    margin: 0 5px;
+    border:2px solid var(--main--color);
+    border-radius: 5px;
+    width: 40%;
+    height: 98%;
+}
+main.lockerBar div.consummation div.info{
+    display: flex;
+    justify-content: left;
+
+}
+main.lockerBar div.proser{
+    border:2px solid var(--main--color);
+    border-radius: 5px;
+    width: 60%;
+    height:98%;
+    display: flex;
+    flex-wrap: wrap;
+}
+main.lockerBar div.proser div{
+    font-size: 0.8em;
+    width: 85px;
+    height: 85px;
+    border: 2px solid var(--main--color);
+    border-radius: 6px;
+    margin: 5px;
+    text-align: center;
 }
 
 main form.login_form {
@@ -241,4 +284,30 @@ main img.logo {
 
 main img.logo_main {
     width: 20%;
+}
+main div.consummation h4{
+    text-align: center;
+    margin: 15px auto;
+}
+
+main div.consummation table,
+main div.consummation thead,
+main div.consummation tbody,
+main div.consummation th,
+main div.consummation tr {
+    margin: 50px auto;
+}
+main div.consummation tbody th.concept{
+    text-align: left;
+    width: 85%;
+}
+main div.consummation tbody th.quantity{
+    width: 35%;
+}
+main div.consummation thead th.concept{
+    text-align: left;
+    width: 85%;
+}
+main div.consummation thead th.quantity{
+    width: 35%;
 }
