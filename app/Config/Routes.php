@@ -40,7 +40,8 @@ $routes->get('/login/(:any)', 'User::login/$1');
 $routes->get('/user/main', 'User::main');
 $routes->get('/user/lockerRec', 'User::lockerRec');
 $routes->get('/user/lockerBar', 'User::lockerBar');
-$routes->get('/admin/lockerAdmin', 'User::lockerAdmin');
+$routes->get('/admin/lockerAdmin', 'Admin::lockerAdmin');
+$routes->get('/admin/admin', 'Admin::admin');
 
 
 $routes->post('/validateUser', 'User::validate_user');
