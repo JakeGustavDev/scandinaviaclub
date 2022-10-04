@@ -3,11 +3,18 @@
     <img class="logo_main" src="public/img/logo.png" alt="">
     <div class="container">
         <div class="lockers">
-            <div class="vip">Kevin Aleman</div>
+            <div class="vip"><p>Kevin Alemán</p><i class="fa-solid fa-star"></i></div>
             <?php 
             $status = ['available', 'unavailable', 'occupied'];
             foreach ($lockers as $locker) { ?>
-                <div class="<?php echo $status[$locker['status']]; ?>"><?php echo $locker['id']; ?></div>
+                <div class="<?php echo $status[$locker['status']]; ?>">
+                <?php echo $locker['id']; ?>
+                <?php if($locker["status"] == 1){ ?>
+                    <i class="fa-solid fa-lock"></i>
+                    <?php }else{ ?>
+                        <i class="fa-solid fa-lock-open"></i>
+                    <?php } ?>
+            </div>               
             <?php } ?>
         </div>
         <div class="menu">

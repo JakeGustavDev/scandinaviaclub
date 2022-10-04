@@ -57,56 +57,80 @@ main div.container div.lockers {
 
 main div.container div.lockers div.vip {
     font-weight: bolder;
-    font-size: 0.95em;
+    font-size: 1em;
     border-radius: 6px;
     text-align: center;
     margin: 2px 5px;
-    width: 80px;
-    height: 80px;
+    width: 18%;
+    height: 16vh;
     background-color: var(--vip--color);
-    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main div.container div.lockers div.vip i{
+    font-size: 2em;
 }
 main div.container div.lockers div.vip:hover{
     background-color: var(--vip--hover--color);
 }
 main div.container div.lockers div.occupied {
     font-weight: bolder;
-    font-size: 0.95em;
+    font-size:1.8em;
     border-radius: 6px;
     text-align: center;
     margin: 2px 5px;
-    width: 80px;
-    height: 80px;
+    width: 18%;
+    height: 16vh;
     background-color: var(--occupied--color);
-    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+}
+main div.container div.lockers div.occupied i{
+    font-size: 1em;
 }
 main div.container div.lockers div.occupied:hover {
     background-color: var(--occupied--hover--color);
 }
 main div.container div.lockers div.available {
     font-weight: bolder;
-    font-size: 0.95em;
+    font-size:1.8em;
     border-radius: 6px;
     text-align: center;
     margin: 2px 5px;
-    width: 80px;
-    height: 80px;
+    width: 18%;
+    height: 16vh;
     background-color: var(--available--color);
-    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main div.container div.lockers div.available i{
+    font-size: 1em;
 }
 main div.container div.lockers div.available:hover{
     background-color: var(--available--hover--color);
 }
 main div.container div.lockers div.unavailable {
     font-weight: bolder;
-    font-size: 0.95em;
+    font-size:1.8em;
     border-radius: 6px;
     text-align: center;
     margin: 2px 5px;
-    width: 80px;
-    height: 80px;
+    width: 18%;
+    height: 16vh;
     background-color: var(--unavailable--color);
-    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+}
+main div.container div.lockers div.unavailable i{
+    font-size: 1em;
 }
 main div.container div.lockers div.unavailable:hover{
     background-color: var(--unavailable--hover--color);
@@ -212,17 +236,20 @@ main div.menu form div.name{
 main.lockerBar{
     margin: 0 auto;
     width: 80%;
-    height: 80vh;
+    height: 60vh !important;
     display: flex;
     justify-content: center;
     flex-direction: row;
+    overflow: hidden;
+
 }
 main.lockerBar div.consummation{
     margin: 0 5px;
     border:2px solid var(--main--color);
     border-radius: 5px;
     width: 40%;
-    height: 98%;
+    height: 70%;
+    overflow-y: scroll;
 }
 main.lockerBar div.consummation div.info{
     display: flex;
@@ -233,18 +260,25 @@ main.lockerBar div.proser{
     border:2px solid var(--main--color);
     border-radius: 5px;
     width: 60%;
-    height:98%;
+    height:70%;
     display: flex;
     flex-wrap: wrap;
+    overflow-y: scroll;
 }
 main.lockerBar div.proser div{
     font-size: 0.8em;
-    width: 85px;
-    height: 85px;
+    width: 18%;
+    height: 18vh;
     border: 2px solid var(--main--color);
     border-radius: 6px;
     margin: 5px;
     text-align: center;
+    background-color: var(--main--color);
+    font-size: 1.2em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main form.login_form {
@@ -285,17 +319,18 @@ main img.logo {
 main img.logo_main {
     width: 20%;
 }
-main div.consummation h4{
-    text-align: center;
-    margin: 15px auto;
+main.lockerBar div.consummation table{
+    width: 100%;
+    border-collapse: collapse;
 }
-
-main div.consummation table,
-main div.consummation thead,
-main div.consummation tbody,
-main div.consummation th,
-main div.consummation tr {
-    margin: 50px auto;
+main.lockerBar div.consummation table tbody tr td{
+    text-align: center;
+}
+main.lockerBar div.consummation table tbody tr.impar{
+    background-color: #99cccc80;
+}
+main.lockerBar div.consummation table tbody tr.par{
+    background-color:#16aaa080 ;
 }
 main div.consummation tbody th.concept{
     text-align: left;
@@ -304,10 +339,10 @@ main div.consummation tbody th.concept{
 main div.consummation tbody th.quantity{
     width: 35%;
 }
-main div.consummation thead th.concept{
+main div.consummation thead td.concept{
     text-align: left;
     width: 85%;
 }
-main div.consummation thead th.quantity{
+main div.consummation thead td.quantity{
     width: 35%;
 }

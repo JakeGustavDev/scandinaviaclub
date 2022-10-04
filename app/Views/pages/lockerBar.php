@@ -11,12 +11,18 @@
             <thead>
                 <th class="concept">Concepto</th>
                 <th class="quantity">Cantidad</th>
-                <th class="quantity">Total</th>
+                <th class="total">Total</th>
             </thead>
             <tbody>
-                <tr>
-                    <td class="concept">Refresco</td>
-                    <td class="quantity">10</td>
+                <tr class="impar">
+                    <td>Refresco</td>
+                    <td>10</td>
+                    <td>10</td>
+                </tr>
+                <tr class="par">
+                    <td>Refresco</td>
+                    <td>10</td>
+                    <td>10</td>
                 </tr>
             </tbody>
         </table>
