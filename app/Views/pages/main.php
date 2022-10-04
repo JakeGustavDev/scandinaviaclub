@@ -4,43 +4,56 @@
     <div class="container">
         <div class="lockers">
             <div class="vip">Kevin Aleman</div>
-            <div class="occupied">1</div>
-            <div class="available">2</div>
-            <div class="unavailable">3</div>
+            <?php 
+            $status = ['available', 'unavailable', 'occupied'];
+            foreach ($lockers as $locker) { ?>
+                <div class="<?php echo $status[$locker['status']]; ?>"><?php echo $locker['id']; ?></div>
+            <?php } ?>
         </div>
         <div class="menu">
             <div class="icons">
-                <div><i class="fa-solid fa-cash-register"></i></div>
-                <div><i class="fa-solid fa-lock-open"></i></div>
-                <div><i class="fa-solid fa-dollar-sign"></i></div>
+                <?php if($_SESSION['type'] == 1){ ?>
+                    <div><i class="fa-solid fa-gears" onclick="goto('/admin/admin')"></i></div>
+                    <div><i class="fa-solid fa-cash-register"></i></div>
+                <?php } ?>
+                <?php if($_SESSION['type'] == 2){ ?>
+                    <div><i class="fa-solid fa-cash-register"></i></div>
+                    <div><i class="fa-solid fa-lock-open"></i></div>
+                <?php } ?>
+                <?php if($_SESSION['type'] == 3){ ?>
+                    <div><i class="fa-solid fa-rotate-right"></i></div>
+                    <div><i class="fa-solid fa-boxes-stacked"></i></div>
+                <?php } ?>
                 <div><i class="fa-solid fa-file"></i></div>
                 <div><i class="fa-solid fa-right-from-bracket"></i></div>
             </div>
-            <form method="POST">
-                <h3>REGISTRAR ENTRADA</h3>
-                <div class="name">
-                    <label for="">Nombre:</label>
-                    <input type="text">
-                </div>
-                <div class="locker">
-                    <label for="">Nº de Locker:</label>
-                    <select name="" id=""></select>
-                </div>
-                <div class="entry">
-                        <label for="">Efectivo:</label>
-                        <input min="0">$/
-                        <label for="">Pos:</label>
-                        <input min="0">$               
-                </div>
-                <div class="checked">
-                    <input type="checkbox">
-                    <p>Sólo masaje / depilación</p>
-                </div>
-                <button type="submit">Registrar</button>
-                <hr>
-                <h3>ENTRADAS HOY: </h3>
-                <h1>0</h1>
-            </form>
+            <?php if($_SESSION['type'] == 2){ ?>
+                <form method="POST">
+                    <h3>REGISTRAR ENTRADA</h3>
+                    <div class="name">
+                        <label for="">Nombre:</label>
+                        <input type="text">
+                    </div>
+                    <div class="locker">
+                        <label for="">Nº de Locker:</label>
+                        <select name="" id=""></select>
+                    </div>
+                    <div class="entry">
+                            <label for="">Efectivo:</label>
+                            <input min="0">$/
+                            <label for="">Pos:</label>
+                            <input min="0">$               
+                    </div>
+                    <div class="checked">
+                        <input type="checkbox">
+                        <p>Sólo masaje / depilación</p>
+                    </div>
+                    <button type="submit">Registrar</button>
+                    <hr>
+                    <h3>ENTRADAS HOY: </h3>
+                    <h1>0</h1>
+                </form>
+            <?php } ?>
         </div>
     </div>
 </main>

@@ -5,9 +5,11 @@ namespace App\Controllers;
 class User extends BaseController
 {
     private $userModel;
+    private $lockerModel;
 
     public function __construct(){
         $this->userModel = model('UserModel');
+        $this->lockerModel = model('LockerModel');
     }
 
     public function login($error = ''){
@@ -15,7 +17,8 @@ class User extends BaseController
     }
 
     public function main(){
-        return view('pages/main');
+        $data['lockers'] = $this->lockerModel->orderBy('CAST(id as UNSIGNED)')->findAll();
+        return view('pages/main', $data);
     }
 
     public function validate_user(){
@@ -53,7 +56,4 @@ class User extends BaseController
         return view('pages/lockerBar');
     }
 
-    public function lockerAdmin(){
-        return view('pages/lockerAdmin');
-    }
 }
