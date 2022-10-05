@@ -70,15 +70,20 @@
                 <label>Total:</label>
                 <p>1000$</p>
             </div>
-            <div class="number">
-                <label>Efectivo</label>
-                <input type="number">
+            <div class="rightSide">
+                <div class="number">
+                    <div class="efectivo">
+                        <label>Efectivo</label>
+                        <input type="number">
+                    </div>
+                    <div class="pos">
+                        <label>Pos</label>
+                        <input type="number" value="0.00">
+                    </div>
+                </div>
+                <button type="submit">Cobrar</button>
             </div>
-            <div class="number">
-                <label>Pos</label>
-                <input type="number">
-            </div>         
         </div>
-        <button type="submit">Cobrar</button>
+
     </div>
 </main>
