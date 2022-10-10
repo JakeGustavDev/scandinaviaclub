@@ -9,6 +9,11 @@
             <li>Covers</li>
         </ul>
     </nav>
+    <div id="usuarios">Hola</div>
+    <div id="proser">Hola</div>
+    <div id="promo">Hola</div>
+    <div id="vip">Hola</div>
+    <div id="cover">Hola</div>
 </main>
 
 
