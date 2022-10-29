@@ -37,14 +37,380 @@ main.admin {
 
 }
 
-#usuarios,
+#user,
 #proser,
 #promo,
 #vip,
 #cover {
     display: none;
-    background-color: black;
-    color: red;
+
+}
+
+main.admin div#option_container {
+    width: 100%;
+    margin-top: 5%;
+}
+
+main.admin div#option_container div.option_item {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+main.admin div#option_container div.option_item form.user {
+    margin-top: 2%;
+    border: 2px solid var(--main--color);
+    border-radius: 5px;
+    width: 50%;
+    height: 35vh;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main.admin div#option_container div.option_item form.note{
+    margin-top: 2%;
+    border: 2px solid var(--main--color);
+    border-radius: 5px;
+    width: 50%;
+    height: 8vh;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main.admin div#option_container div.option_item form.note div.note{
+    width: 110%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+main.admin div#option_container div.option_item form.note div.note button{
+    width: 40%;
+}
+main.admin div#option_container div.option_item form.vips{
+    margin-top: 2%;
+    border: 2px solid var(--main--color);
+    border-radius: 5px;
+    width: 70%;
+    height: 15vh;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.2em;
+}
+main.admin div#option_container div.option_item form.vips div{
+   width: 30%;
+}
+main.admin div#option_container div.option_item form.vips div.vips_discount select{
+   width: 45%;
+}
+main.admin div#option_container div.option_item form.vips input{
+    height: 5vh;
+    text-align: center;
+}
+main.admin div#option_container div.option_item form.new_password{
+    margin-top: 2%;
+    border: 2px solid var(--main--color);
+    border-radius: 5px;
+    width: 70%;
+    height: 15vh;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.2em;
+}
+main.admin div#option_container div.option_item form.new_password button{
+    width: 55%;
+}
+main.admin div#option_container div.option_item form.new_password div.vips_options{
+    width: 30%;
+    display: flex;
+    align-items: center;
+
+}
+main.admin div#option_container div.option_item form.new_password input{
+    height: 5vh;
+    text-align: center;
+}
+main.admin div#option_container div.option_item form.vips select{
+    height: 5vh;
+    width: 50%;
+}
+
+main.admin div#option_container div.option_item div.services1 {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin-top: 20px;
+}
+
+main.admin div#option_container div.option_item div.services2 {
+    display: flex;
+    width: 85%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+main.admin div#option_container div.option_item div.services2 label {
+    font-size: 1.2em;
+    width: 40%;
+}
+
+main.admin div#option_container div.option_item div.services1 label {
+    font-size: 1.2em;
+    width: 40%;
+}
+
+main.admin div#option_container div.option_item div.services1 input {
+    width: 40%;
+    height: 5vh;
+    text-align: right;
+    font-size: 1.2em;
+}
+
+main.admin div#option_container div.option_item div.services1 div.services_price {
+    display: flex;
+    align-items: center;
+    width: 50%;
+
+}
+
+main.admin div#option_container div.option_item div.services2 div.discount {
+    display: flex;
+    align-items: center;
+    width: 50%;
+
+}
+
+main.admin div#option_container div.option_item div.services2 div.type2 {
+    display: flex;
+    align-items: center;
+    width: 50%;
+
+}
+
+main.admin div#option_container div.option_item div.services2 select {
+    height: 5vh;
+    width: 40%;
+    font-size: 1.2em;
+    text-align: right;
+
+}
+
+main.admin div#option_container div.option_item div.services1 div.services_user {
+    display: flex;
+    align-items: center;
+    width: 50%;
+
+}
+main.admin div#option_container div.option_item form button {
+    width: 20%;
+    justify-content: center;
+    background-color: var(--main--color);
+    padding: 3px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin: 10px 0 10px 0;
+    color: white;
+}
+
+main.admin div#option_container div.option_item form.password {
+    margin-top: 2%;
+    border: 2px solid var(--main--color);
+    border-radius: 5px;
+    width: 50%;
+    height: 7.5vh;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main.admin div#option_container div.option_item form.password div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+main.admin div#option_container div.option_item form.password div input {
+    width: 30%;
+    text-align: center;
+    height: 5vh;
+}
+
+main.admin div#option_container div.option_item form.password div label {
+    font-size: 1.2em;
+}
+main.admin div#option_container div.option_item form.proser {
+    margin-top: 2%;
+    border: 2px solid var(--main--color);
+    border-radius: 5px;
+    width: 50%;
+    height: 30vh;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main.admin div#option_container div.option_item form div.user,
+main.admin div#option_container div.option_item form div.name,
+main.admin div#option_container div.option_item form div.password,
+main.admin div#option_container div.option_item form div.type {
+    width: 105%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1vh;
+
+}
+
+main.admin div#option_container div.option_item form div.user input,
+main.admin div#option_container div.option_item form div.name input,
+main.admin div#option_container div.option_item form div.password input,
+main.admin div#option_container div.option_item form div.type input,
+main.admin div#option_container div.option_item form div.type select {
+    text-align: center;
+    width: 70%;
+    height: 5vh;
+}
+
+main.admin div#option_container div.option_item form div.type select {
+    font-size: 1.2em;
+    padding: 0.2px;
+}
+
+main.admin div#option_container div.option_item form div.user label,
+main.admin div#option_container div.option_item form div.name label,
+main.admin div#option_container div.option_item form div.password label,
+main.admin div#option_container div.option_item form div.type label {
+    text-align: left;
+    font-size: 1.2em;
+    width: 5%;
+}
+
+main.admin div#option_container div.option_item form.cover div.cover1 div.cover_name input{
+    height: 5vh;
+}
+main.admin div#option_container div.option_item form.cover div.cover1 div.cover_name label{
+    font-size: 1.2em;
+}
+
+main.admin div#option_container div.option_item form.cover div.cover1 div.cover_price input{
+    height: 5vh;
+}
+main.admin div#option_container div.option_item form.cover div.cover1 div.cover_price label{
+    font-size: 1.2em;
+}
+main.admin div#option_container div.option_item form.cover,
+main.admin div#option_container div.option_item form.promo {
+    margin-top: 2%;
+    border: 2px solid var(--main--color);
+    border-radius: 5px;
+    width: 50%;
+    height: 35vh;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main.admin div#option_container div.option_item form.cover div.cover_check label,
+main.admin div#option_container div.option_item form.promo div.promo_check label{
+    margin-right: 20px;
+}
+
+main.admin div#option_container div.option_item form.cover div.cover1,
+main.admin div#option_container div.option_item form.promo div.promo1{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main.admin div#option_container div.option_item form.cover div.cover2,
+main.admin div#option_container div.option_item form.promo div.promo2{
+    display: flex;
+    align-items: center;
+    width: 85%;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+main.admin div#option_container div.option_item form.cover div.cover2 div.cover_amount,
+main.admin div#option_container div.option_item form.promo div.promo2 div.promo_amount{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main.admin div#option_container div.option_item form.cover div.cover2 div.cover_amount label,
+main.admin div#option_container div.option_item form.promo div.promo2 div.promo_amount label{
+    font-size: 1.2em;
+}
+main.admin div#option_container div.option_item form.cover div.cover2 div.cover_amount select,
+main.admin div#option_container div.option_item form.promo div.promo2 div.promo_amount input{
+    width: 50%;
+    height: 5vh;
+}
+main.admin div#option_container div.option_item form.cover div.cover2 div.cover_items,
+main.admin div#option_container div.option_item form.promo div.promo2 div.promo_items{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main.admin div#option_container div.option_item form.cover div.cover2 div.cover_items select,
+main.admin div#option_container div.option_item form.promo div.promo2 div.promo_items select{
+    width: 50%;
+    height: 5vh;
+}
+main.admin div#option_container div.option_item form.cover div.cover2 div.cover_items label,
+main.admin div#option_container div.option_item form.promo div.promo2 div.promo_items label{
+    font-size: 1.2em;
+}
+main.admin div#option_container div.option_item form.cover div.cover1 div.cover_name,
+main.admin div#option_container div.option_item form.promo div.promo1 div.promo_name{
+    margin-top: 20px;
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main.admin div#option_container div.option_item form.cover div.cover1 div.cover_name input,
+main.admin div#option_container div.option_item form.promo div.promo1 div.promo_name input{
+    width: 50%;
+    height: 5vh;
+    text-align: right;
+    font-size: 1.2em;
+}
+main.admin div#option_container div.option_item form.promo div.cover1 div.cover_name label,
+main.admin div#option_container div.option_item form.promo div.promo1 div.promo_name label{
+    font-size: 1.2em;
+}
+main.admin div#option_container div.option_item form.cover div.cover1 div.cover_price,
+main.admin div#option_container div.option_item form.promo div.promo1 div.promo_price{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+main.admin div#option_container div.option_item form.promo div.cover1 div.cover_price input,
+main.admin div#option_container div.option_item form.promo div.promo1 div.promo_price input{
+    width: 60%;
+    height: 5vh;
+    text-align: right;
+    font-size: 1.2em;
+}
+main.admin div#option_container div.option_item form.promo div.cover1 div.cover_price label,
+main.admin div#option_container div.option_item form.promo div.promo1 div.promo_price label{
+    font-size: 1.2em;
 }
 
 main.admin nav.nav_bar {
@@ -59,6 +425,7 @@ main.admin nav.nav_bar ul {
 }
 
 main.admin nav.nav_bar ul li {
+    cursor: pointer;
     border-radius: 5px;
     padding: 10px;
     background-color: var(--button--color);
